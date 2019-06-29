@@ -13,6 +13,8 @@ python-dotenv = "*"
 dj-database-url = "*"
 gunicorn = "*"
 whitenoise = "*"
+django-jet = "*"
+django-cors-headers = "*"
 
 [requires]
 python_version = "3.7"

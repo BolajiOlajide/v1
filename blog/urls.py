@@ -15,18 +15,19 @@ Including another URLconf
 """
 import os
 
-from django.contrib import admin
-from django.urls import path
+from blog_app.admin import admin_site
+from django.urls import path, include
 from dotenv import load_dotenv
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 dotenv_path = os.path.join(BASE_DIR, '.env')
-print(dotenv_path)
 load_dotenv(dotenv_path)
 
 ADMIN_URL = os.getenv('ADMIN_URL')
 
 urlpatterns = [
-    path(f'{ADMIN_URL}/', admin.site.urls),
+    path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
+    path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
+    path(f'{ADMIN_URL}/', admin_site.urls),
 ]
