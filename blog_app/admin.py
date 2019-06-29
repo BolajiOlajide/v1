@@ -10,7 +10,7 @@ class ProtonBlogAdminSite(admin.AdminSite):
 
 class PostAdminSite(admin.ModelAdmin):
     search_fields = ['id', 'title']
-    exclude=('created_at', 'updated_at')
+    exclude=('created_at', 'updated_at', 'slug')
 
 
 class SubscriberAdminSite(admin.ModelAdmin):

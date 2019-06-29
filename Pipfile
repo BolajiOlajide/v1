@@ -15,6 +15,7 @@ gunicorn = "*"
 whitenoise = "*"
 django-jet = "*"
 django-cors-headers = "*"
+markdown = "*"
 
 [requires]
 python_version = "3.7"

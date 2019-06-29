@@ -1,14 +1,17 @@
 from uuid import uuid4
 
 from django.db.models import (
-    Model,
-    UUIDField,
-    TextField,
     BooleanField,
-    FileField,
+    CharField,
+    DateField,
     EmailField,
-    DateField
+    FileField,
+    Model,
+    SlugField,
+    TextField,
+    UUIDField,
 )
+from django.utils.text import slugify
 
 # Create your models here.
 class Post(Model):
@@ -17,16 +20,21 @@ class Post(Model):
     """
     id = UUIDField(unique=True, primary_key=True, default=uuid4, editable=False)
     content = TextField(null=False)
-    title = TextField(null=False)
-    published = BooleanField(null=False, default=False)
+    title = CharField(null=False, max_length=255)
+    slug = SlugField(unique=True, max_length=255)
+    published = BooleanField(default=False)
     created_at = DateField(auto_now_add=True)
     updated_at = DateField(auto_now=True)
 
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Post, self).save(*args, **kwargs)
+
     def __repr__(self):
-        return f'<Post id={self.id}>'
+        return f'<Post slug={self.slug}>'
 
     def __str__(self):
-        return f'<Post id={self.id}>'
+        return f'<Post slug={self.slug}>'
 
 
 class Subscriber(Model):

@@ -16,7 +16,7 @@ Including another URLconf
 import os
 
 from blog_app.admin import admin_site
-from django.urls import path, include
+from django.urls import path, include, re_path
 from dotenv import load_dotenv
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -30,4 +30,5 @@ urlpatterns = [
     path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
     path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
     path(f'{ADMIN_URL}/', admin_site.urls),
+    re_path(r'^', include('blog_app.urls'))
 ]
