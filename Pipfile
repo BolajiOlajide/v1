@@ -6,15 +6,6 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "*"
-psycopg2-binary = "*"
-django-cors = "*"
-python-dotenv = "*"
-dj-database-url = "*"
-gunicorn = "*"
-whitenoise = "*"
-django-jet = "*"
-django-cors-headers = "*"
 markdown = "*"
 pelican = "*"
 
