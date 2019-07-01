@@ -47,3 +47,7 @@ MARKDOWN = {
 
 THEME = 'pelican-hyde'
 PROFILE_IMAGE = '25608335.jpeg'
+BIO = """
+My names are Bolaji Olajide. I am popularly known as Proton.
+"""
+DISQUS_SITENAME='protonsblog'

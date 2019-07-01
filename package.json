@@ -1,0 +1,8 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:BolajiOlajide/blog.git",
+  "author": "Bolaji Olajide <cooproton@gmail.com>",
+  "license": "MIT"
+}
