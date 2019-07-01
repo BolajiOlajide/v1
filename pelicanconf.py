@@ -8,6 +8,10 @@ SITEURL = ''
 
 PATH = 'content'
 
+DEFAULT_METADATA = {
+    'status': 'draft',
+}
+
 TIMEZONE = 'Africa/Lagos'
 
 DEFAULT_LANG = 'en'
@@ -50,4 +54,5 @@ PROFILE_IMAGE = '25608335.jpeg'
 BIO = """
 My names are Bolaji Olajide. I am popularly known as Proton.
 """
-DISQUS_SITENAME='protonsblog'
+# DISQUS_SITENAME='protonsblog'
+GOOGLE_ANALYTICS='UA-48710501-5'
