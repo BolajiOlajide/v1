@@ -1,1 +1,1 @@
-web: make clean && make html && yarn start
+web: yarn start
