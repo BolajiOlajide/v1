@@ -1,1 +1,1 @@
-web: gunicorn wsgi --pythonpath=blog
+web: yarn start
