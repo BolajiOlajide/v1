@@ -1,4 +1,10 @@
-/*
-/*/
-!/output/
-!/package.json
+content/
+node_modules/
+__pycache__/
+.editorconfig
+Makefile
+pelicanconf.py
+Pipfile
+Pipfile.lock
+publishconf.py
+tasks.py
