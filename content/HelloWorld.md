@@ -6,26 +6,15 @@ Authors: Bolaji Olajide
 Summary: Introduction to Proton's Blog
 Status: published
 
-Hello there,
+Hello and welcome!
 
-Welcome to my blog. I'm so excited to have finally launched this.
-I've been working on my personal blog for quite sometime and this is the 15th variation of my personal blog.
-I've tried out tools such as:
+After 14 variations and experimenting with tools like GatsbyJS, NextJS, NuxtJS, Ghost, Hugo, and Django, I am excited to finally launch my blog.
 
-- GatsbyJS
-- NextJS
-- NuxtJS
-- Ghost
-- Hugo
-- Django
-e.t.c
+I was basically playing around with most of these tools as I didn't have a set idea of what I wanted at the time. Anyway, that's over now seeing that I have launched it.
 
-I was basically playing around with most of this tools as I didn't have a fixed idea on what I wanted yet.
-Anyways that's over now as I have finally launched my blog.
+This site is based on [Pelican](https://docs.getpelican.com/en/stable/quickstart.html), a Python static site generator. I like to call my implementation **"PAMSTACK"** - a sibling of the popular **JAMSTACK** which makes use of Javascript.
 
-It's based on [Pelican](https://docs.getpelican.com/en/stable/quickstart.html) which is a Python static site generator.
-I fondly call my implementation **PAMSTACK**, a sibling of the popular **JAMSTACK** that makes use of Javascript.
+I'll be sharing a lot of my learnings here. Backticks & Tildes will still house a lot of my tutorials until I figure out what to do with it.
+For videos of learnings I don't have the urge to write about, you can find them at [vlog[dot]bolaji[dot]de](http://vlog.bolaji.de).
 
-I'll be sharing a lot of my learnings here. **Backticks & Tildes** will still house a lot of my tutorials until I figure out what to do with it. Feel free to check out my **VLOG** :), I'll be creating videos of learnings I don't have the urge to write about [here](http://vlog.bolaji.de) - vlog[dot]bolaji[dot]de
-
-You can find the sourcecode of my blog [here](https://github.com/BolajiOlajide/blog).
+You can find the source code of my blog [here](https://github.com/BolajiOlajide/blog).
