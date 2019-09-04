@@ -25,7 +25,7 @@ const Layout = ({
 
   return (
     <div className={styles.layout}>
-      <Helmet>
+      <Helmet defer={false}>
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />

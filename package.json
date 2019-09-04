@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
-  "name": "proton-blog",
-  "description": "Bolaji Olajide's Personal Blog",
+  "version": "3.0.3",
+  "name": "protonsblog",
+  "description": "protons blog based on lumen",
   "main": "n/a",
   "scripts": {
     "develop": "yarn run clean && gatsby develop",
@@ -16,26 +16,14 @@
     "test:coverage": "jest --coverage --config ./jest/jest-config.js",
     "test:watch": "jest --watch --config ./jest/jest-config.js"
   },
-  "repository": "https://github.com/BolajiOlajide/blog",
-  "author": "Bolaji Olajide",
+  "repository": "",
+  "author": "",
   "license": "MIT",
   "keywords": [
     "gatsby",
     "graphql",
-    "netlify",
-    "netlify-cms",
-    "pagination",
-    "categories",
-    "tags",
-    "prismjs",
-    "static",
-    "lost",
-    "blog",
-    "minimal",
-    "react",
-    "theme",
-    "starter",
-    "disqus"
+    "proton",
+    "blog"
   ],
   "dependencies": {
     "bluebird": "^3.5.5",
