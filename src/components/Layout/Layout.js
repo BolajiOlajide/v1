@@ -10,10 +10,12 @@ type Props = {
   children: ReactNode,
   title: string,
   description?: string,
-  socialImage? :string
+  socialImage? :string,
+  slug :string
 };
 
 const Layout = ({
+  slug,
   children,
   title,
   description,
@@ -33,6 +35,11 @@ const Layout = ({
         <meta property="og:image" content={metaImageUrl} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={title} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image"
+          content={`${url}${slug}twitter-card.jpg`}
+        />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={metaImageUrl} />
       </Helmet>

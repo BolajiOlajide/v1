@@ -2,6 +2,7 @@
 
 const siteConfig = require('./config.js');
 const postCssPlugins = require('./postcss-config.js');
+require('dotenv').config();
 
 module.exports = {
   pathPrefix: siteConfig.pathPrefix,
@@ -120,11 +121,25 @@ module.exports = {
             resolve: 'gatsby-remark-responsive-iframe',
             options: { wrapperStyle: 'margin-bottom: 1.0725rem' }
           },
+          {
+            resolve: 'gatsby-remark-embed-gist',
+            options: {
+              username: 'BolajiOlajide',
+              includeDefaultCss: true
+            }
+          },
+          {
+            resolve: 'gatsby-plugin-mailchimp',
+            options: {
+              endpoint: process.env.GATSBY_MC_ENDPOINT
+            }
+          },
           'gatsby-remark-autolink-headers',
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
-          'gatsby-remark-external-links'
+          'gatsby-remark-external-links',
+          'gatsby-remark-social-cards'
         ]
       }
     },
@@ -140,7 +155,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingIds: [siteConfig.googleAnalyticsId],
+        trackingIds: [process.env.GATSBY_GA_ID],
         pluginConfig: {
           head: true,
         },

@@ -4,7 +4,7 @@ date: "2019-07-01T00:11:32.169Z"
 template: "post"
 draft: false
 slug: "/posts/hello-world"
-category: "General"
+category: "Tech"
 tags:
   - "blog"
   - "random"

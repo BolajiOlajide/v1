@@ -12,3 +12,4 @@ Something like **PAMSTACK**.
 ## V2
 
 Built with GatsbyJS
+Based on the [Lumen Template](https://www.gatsbyjs.org/starters/alxshelepenok/gatsby-starter-lumen/)

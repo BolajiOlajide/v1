@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'http://blog.bolaji.de',
   pathPrefix: '/',
   title: 'Proton\'s Blog',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  subtitle: 'Curation of Proton\'s learnings',
   copyright: '© All rights reserved.',
   disqusShortname: 'protonsblog',
   postsPerPage: 10,
@@ -16,10 +16,6 @@ module.exports = {
       path: '/'
     },
     {
-      label: 'About me',
-      path: '/pages/about'
-    },
-    {
       label: 'Contact me',
       path: '/pages/contacts'
     }
@@ -27,7 +23,7 @@ module.exports = {
   author: {
     name: 'Bolaji Olajide',
     photo: '/photo.jpeg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Proton is a full-stack software engineer based in Lagos, Nigeria. He currently builds exciting learning experiences with Pluralsight.',
     contacts: {
       email: '',
       facebook: '#',
