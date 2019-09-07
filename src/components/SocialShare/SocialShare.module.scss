@@ -1,0 +1,32 @@
+.socialHeader {
+    text-align: center;
+    font-weight: 200;
+}
+
+.iconGroup {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    justify-content: center;
+    padding: 0;
+}
+
+.social_icon {
+    font-size: 2rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__twitter {
+        color: #1DA1F2;
+    }
+
+    &__facebook {
+        color: #4267B2;
+    }
+
+    &__linkedin {
+        color: #0077B5;
+    }
+}

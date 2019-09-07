@@ -14,6 +14,18 @@
     padding: 0 15px;
   }
 
+  &__social_share {
+    max-width: $layout-post-width;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__subscribe_form {
+    max-width: $layout-post-width;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
   &__home-button {
     display: block;
     max-width: 90px;

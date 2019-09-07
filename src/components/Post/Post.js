@@ -7,17 +7,20 @@ import Content from './Content';
 import Meta from './Meta';
 import Tags from './Tags';
 import SubscribeForm from '../SubscribeForm';
+import SocialShare from '../SocialShare';
 import styles from './Post.module.scss';
 import type { Node } from '../../types';
 
 type Props = {
-  post: Node
+  post: Node,
+  siteUrl: string
 };
 
-const Post = ({ post }: Props) => {
+const Post = ({ post, siteUrl }: Props) => {
   const { html } = post;
   const { tagSlugs, slug } = post.fields;
   const { tags, title, date } = post.frontmatter;
+  const socialProps = { slug, siteUrl, title };
 
   return (
     <div className={styles['post']}>
@@ -27,13 +30,19 @@ const Post = ({ post }: Props) => {
         <Content body={html} title={title} />
       </div>
 
+      <div className={styles['post__social_share']}>
+        <SocialShare {...socialProps} />
+      </div>
+
       <div className={styles['post__footer']}>
         <Meta date={date} />
         {tags && tagSlugs && <Tags tags={tags} tagSlugs={tagSlugs} />}
         <Author />
       </div>
 
-      {/* <SubscribeForm /> */}
+      <div className={styles['post__subscribe_form']}>
+        <SubscribeForm />
+      </div>
 
       <div className={styles['post__comments']}>
         <Comments postSlug={slug} postTitle={post.frontmatter.title} />
