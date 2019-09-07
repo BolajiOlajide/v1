@@ -40,9 +40,9 @@ const Post = ({ post, siteUrl }: Props) => {
         <Author />
       </div>
 
-      <div className={styles['post__subscribe_form']}>
+      {/* <div className={styles['post__subscribe_form']}>
         <SubscribeForm />
-      </div>
+      </div> */}
 
       <div className={styles['post__comments']}>
         <Comments postSlug={slug} postTitle={post.frontmatter.title} />

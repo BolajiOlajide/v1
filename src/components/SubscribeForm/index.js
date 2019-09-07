@@ -5,17 +5,18 @@ import styles from './SubscribeForm.module.scss';
 const SubscribeForm = () => {
   // concept from https://thetrevorharmon.com/blog/email-signup-forms-with-gatsby-and-mailchimp
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState(false);
+  const [status, setStatus] = useState(null);
 
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
       const result = await addToMailchimp(email);
       console.log(result);
-      setStatus(true);
+
+      setStatus(result.msg);
     } catch (error) {
       console.error(error.message);
-      setStatus(false);
+      setStatus(error.message);
     }
   };
 
@@ -26,7 +27,7 @@ const SubscribeForm = () => {
   return (
     <form onSubmit={handleSubmit} className={styles.EmailListForm}>
       <h2>Subscribe to my mailing list!</h2>
-      {status && <p>Successfully subscribed to Proton's mailing list.</p>}
+      <p>{status}</p>
       <div className={styles.Wrapper}>
         <input
           placeholder="Email address"

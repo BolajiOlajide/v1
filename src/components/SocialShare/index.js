@@ -14,7 +14,6 @@ type Props = {
 const SocialShare = ({ slug, siteUrl, title }: Props) => {
   const shareUrl = siteUrl + slug;
   const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
-  console.log(styles.social_icon)
 
   return (
     <section>
