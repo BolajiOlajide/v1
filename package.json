@@ -26,6 +26,7 @@
     "blog"
   ],
   "dependencies": {
+    "@weknow/gatsby-remark-twitter": "^0.2.3",
     "bluebird": "^3.5.5",
     "classnames": "^2.2.6",
     "codecov": "^3.5.0",

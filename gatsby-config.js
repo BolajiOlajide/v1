@@ -99,9 +99,16 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: process.env.GATSBY_MC_ENDPOINT
+      }
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          '@weknow/gatsby-remark-twitter',
           'gatsby-remark-relative-images',
           {
             resolve: 'gatsby-remark-katex',
@@ -126,12 +133,6 @@ module.exports = {
             options: {
               username: 'BolajiOlajide',
               includeDefaultCss: true
-            }
-          },
-          {
-            resolve: 'gatsby-plugin-mailchimp',
-            options: {
-              endpoint: process.env.GATSBY_MC_ENDPOINT
             }
           },
           'gatsby-remark-autolink-headers',
