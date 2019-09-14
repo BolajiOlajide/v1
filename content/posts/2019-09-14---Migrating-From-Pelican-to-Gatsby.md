@@ -1,16 +1,20 @@
 ---
-title: "Migrating from Pelican to Gatsby"
-date: 2019-09-14T14:46:33.863Z
-template: "post"
+template: post
+title: Migrating from Pelican to Gatsby
+slug: /posts/migrating-from-pelican-to-gatsby/
 draft: false
-slug: "/posts/migrating-from-pelican-to-gatsby/"
-category: "Tech"
+date: 2019-09-14T14:46:33.863Z
+description: >-
+  In this article, I explain the reason for the switch from Pelican to GatsbyJS
+  as a static site generator for my blog.
+category: Tech
 tags:
-  - "Pelican"
-  - "Gatsby"
-description: "In this article, I explain the reason for the switch from Pelican to GatsbyJS as a static site generator for my blog."
+  - Pelican
+  - Gatsby
+  - blog
+  - django
+  - cms
 ---
-
 At the time my blog launched, it was built with a lightweight python static site generator called [Pelican](https://docs.getpelican.com/en/stable/). Before the launch, I dabbled with several options, some of which are:
 
 * [Ghost](https://ghost.org/)
@@ -33,7 +37,7 @@ Experimenting with several technologies was fun because as I played around with 
 
 After a while, I started losing the zeal to write. This made me decide to take the project seriously. I was watching a video on [JAMStack](https://www.youtube.com/watch?v=N2X2PA_EYT4&t=930s) by [Gift](https://twitter.com/lauragift21?lang=en) and how it works and it made me think of another experiment (I know, I love experiments hehe) - **Are there any static site generators built with Python that work with markdown?**
 
-I proceeded with the experiment with [Django](https://www.djangoproject.com/) - *an open-source, high-level Python Web framework that takes care of much of the hassles of web development*. I approached this by looking for plugins / libraries that can be integrated with Django for rendering markdown as HTML using the `django-admin` as a CMS.
+I proceeded with the experiment with [Django](https://www.djangoproject.com/) - _an open-source, high-level Python Web framework that takes care of much of the hassles of web development_. I approached this by looking for plugins / libraries that can be integrated with Django for rendering markdown as HTML using the `django-admin` as a CMS.
 
 I made use of [Django-Markdown](https://pythonhosted.org/django-markdown/), which worked fine but ultimately it became a pain to maintain even though I hadn't launched. I enjoyed writing articles via the `Django-Admin` page and being able to save posts as drafts.
 
@@ -52,6 +56,8 @@ Pelican has a large community and I found a number of resources curated [here](h
 
 My return to GatsbyJS reminds me of a quote by Thanos in the Avengers Endgame movie.
 
+![thanos-failure](/media/final_5d7d6733aa1aea0013d82230_45982.jpg)
+
 After, I launched my blog with [Pelican](https://docs.getpelican.com/en/stable/), I discovered that at some point I’d have to do a lot more (not as much as with the Django equivalent) to maintain than I'd rather. I needed a platform where I could focus on writing, something that medium offered me.
 I didn’t want to worry about the layout / design.
 Deploying  my blog built with Pelican was also a hassle as I had to manually build the content then push just the content to Heroku to be served by [static-server](https://www.npmjs.com/package/static-server). I wrote a script to automate that process but I didn’t like the fact that for a new article I would build the content afresh.
@@ -63,9 +69,7 @@ At this point, I realized that I was tired of experimenting and I wasn't going t
 With Gatsby, I found a worthy option that provided me with:
 
 * Templates
-
 * Plugins
-
 * Resources (built on React, I could add my own custom components like the newsletter component, social share component)
 
 After doing a bit of research, I found a template that suited my needs in [Lumen](https://www.gatsbyjs.org/starters/alxshelepenok/gatsby-starter-lumen/) - it comes with Netlify CMS bundled so it was an easy pick for me. I began tweaking it to my needs and adding some functionalities and features I would need. I plan on contributing to Lumen, to make it more accessible.
