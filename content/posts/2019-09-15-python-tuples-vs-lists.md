@@ -17,7 +17,8 @@ Tuples and Lists are commonly-used data structures used in Python. A lot of libr
 They are both very similar, some of the properties they have in common include:
 
 * They can hold any data type (strings, integers, dictionaries etc can be stored in a tuple or a list)
-* They both support indexing
+* Items in a tuple or list can be accessed via it's index
+* They are ordered. 
 
 
 Seeing how similar they are, what then is the difference between a tuple and a list?
@@ -33,17 +34,33 @@ items = ('apple', 'oranges', 'pineapple')
 
 Notice when we are initialising a tuple with just one item, we append a trailing comma to it. The parenthesis don't automatically make them tuples. You have to add a comma after the string to indicate to python that it should be a tuple, however this isn't compulsory when you have more than one item in the tuple.
 
-You can also create tuples using the `tuple` constructor, 
+You can also create tuples using the `tuple` constructor which takes a collection as it's argument and converts to a tuple.
+
+```python
+names = tuple(['bolaji'])
+```
 
 ### Lists
-A list are denoted with square brackets. It is somewhat similar to what you'll call an array in other programming languages like Javascript.
+Lists are denoted with square brackets. It is somewhat similar to what you'll call an array in other programming languages like Javascript.
 
-The main difference between a list and a tuple is that a list is mutable while a tuple is immutable.
+```python
+names = ['bolaji']
+items = ['apple', 'oranges', 'pineapple']
+```
 
-Mutability refers to the liability or tendency for something to change.
+You can also create a list with the `list` constructor which takes a collection as it's argument and converts to a tuple.
 
-Some folks get confused by what mutability means in this context as python doesn’t have the `const` keyword to define a variable that can’t be changed. I had this same thought when I was learning about tuples, coming from a JavaScript background. The concept of mutability here is concerning the index - an index in a list can be reassigned a new variable. 
-We can shift items, pop them and so on, but in a tuple, we can’t do this because it’s immutable.
+```python
+names = list(('bolaji',))
+items = list(('apple', 'oranges', 'pineapple'))
+```
+
+The main difference between a list and a tuple is that a list is mutable while a tuple is immutable. Once you define a list, you can append, remove, shift and replace items in that list but that can't be done with a tuple. A tuple can be regarded as a strict data structure because once defined, it can't be changed.
+
+> Mutability refers to the liability or tendency for something to change.
+
+Some folks get confused by what mutability means in this context as python doesn’t have the `const` keyword to define a variable that can’t be changed. I had this same thought when I was learning about tuples, coming from a JavaScript background. The concept of mutability here has to do with the items in the collection and not the variable itself.
+
 Take a look at the screenshot below to understand what happens when you try to mutate a tuple.
 
 ![immutability in tuples](/media/screenshot-2019-09-07-at-1.16.23-am.png)
