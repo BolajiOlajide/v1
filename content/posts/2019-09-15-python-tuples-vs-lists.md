@@ -2,7 +2,7 @@
 template: post
 title: Python Tuples vs Lists
 slug: /posts/python-tuples-lists
-draft: true
+draft: false
 date: 2019-09-14T23:41:22.605Z
 description: This article sheds light on the difference between a tuple and a list.
 category: Tech
