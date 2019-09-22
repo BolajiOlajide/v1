@@ -12,14 +12,13 @@ tags:
   - list
   - mutability
 ---
-Tuples and Lists are commonly-used data structures used in Python. A lot of libraries and projects use them in different ways. They are both heterogeneous collections of items.
+Tuples and Lists are commonly-used data structures used in Python. A lot of libraries and projects use them in different ways. They are both heterogeneous collections of items - i.e it can hold a combination of several types of data such as strings, integers etc.
 
 They are both very similar, some of the properties they have in common include:
 
 * They can hold any data type (strings, integers, dictionaries etc can be stored in a tuple or a list)
 * Items in a tuple or list can be accessed via it's index
 * They are ordered. 
-
 
 Seeing how similar they are, what then is the difference between a tuple and a list?
 
@@ -30,6 +29,7 @@ Tuples are denoted with parentheses. Example:
 ```python
 names = ('bolaji',)
 items = ('apple', 'oranges', 'pineapple')
+items = (1,2,[12],('bill',))
 ```
 
 Notice when we are initialising a tuple with just one item, we append a trailing comma to it. The parenthesis don't automatically make them tuples. You have to add a comma after the string to indicate to python that it should be a tuple, however this isn't compulsory when you have more than one item in the tuple.
@@ -41,6 +41,7 @@ names = tuple(['bolaji'])
 ```
 
 ### Lists
+
 Lists are denoted with square brackets. It is somewhat similar to what you'll call an array in other programming languages like Javascript.
 
 ```python
