@@ -70,4 +70,13 @@ From the screenshot above, you can see that overwriting the item at index 2 in t
 
 Tuples are used whenever we want to ensure immutability in a collection so no user action can overwrite the content at the index. However, we can reassign something else to the variable `store_tuple` because the variable is only a container that holds a reference to the tuple we created.
 
+Another thing to note is that though each tuple element in its self is immutable, values of mutable element in a tuple are not.
+
+```python
+my_tuple = (8, 'kali', {'first_name': 'bran'}, [1, 5, 9])
+my_tuple[3][0] = 100
+
+print(my_tuple) // (8, 'kali', {'first_name': 'bran'}, [100, 5, 9])
+```
+
 Did you find this helpful? Feel free to share a comment in the comment section below.
