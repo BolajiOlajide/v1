@@ -49,7 +49,7 @@ names = ['bolaji']
 items = ['apple', 'oranges', 'pineapple']
 ```
 
-You can also create a list with the `list` constructor which takes a collection as it's argument and converts to a tuple.
+You can also create a list with the `list` constructor which takes a collection as it's argument and converts to a list.
 
 ```python
 names = list(('bolaji',))
@@ -78,5 +78,7 @@ my_tuple[3][0] = 100
 
 print(my_tuple) // (8, 'kali', {'first_name': 'bran'}, [100, 5, 9])
 ```
+
+
 
 Did you find this helpful? Feel free to share a comment in the comment section below.
