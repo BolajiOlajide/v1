@@ -5,8 +5,9 @@ slug: setting-up-mysql-mac
 draft: true
 date: 2020-07-16T01:11:33.827Z
 description: >-
-  Setting up Postgres can be a pain sometimes, in this article we walk through
-  setting up Postgres with all the required permissions on a new PC.
+  Setting up a new database on mac can be a pain for some developers. In this
+  tutorial, I take you through the steps I take to install and set up MySQL on
+  my MacBook for my development.
 category: tech
 tags:
   - mac
