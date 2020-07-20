@@ -2,7 +2,7 @@
 template: post
 title: Setting up MySQL on a Macbook
 slug: setting-up-mysql-mac
-draft: true
+draft: false
 date: 2020-07-16T01:11:33.827Z
 description: >-
   Setting up a new database on mac can be a pain for some developers. In this
