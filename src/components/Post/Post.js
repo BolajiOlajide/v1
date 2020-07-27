@@ -6,7 +6,6 @@ import Comments from './Comments';
 import Content from './Content';
 import Meta from './Meta';
 import Tags from './Tags';
-import SubscribeForm from '../SubscribeForm';
 import SocialShare from '../SocialShare';
 import styles from './Post.module.scss';
 import type { Node } from '../../types';
@@ -39,10 +38,6 @@ const Post = ({ post, siteUrl }: Props) => {
         {tags && tagSlugs && <Tags tags={tags} tagSlugs={tagSlugs} />}
         <Author />
       </div>
-
-      {/* <div className={styles['post__subscribe_form']}>
-        <SubscribeForm />
-      </div> */}
 
       <div className={styles['post__comments']}>
         <Comments postSlug={slug} postTitle={post.frontmatter.title} />
