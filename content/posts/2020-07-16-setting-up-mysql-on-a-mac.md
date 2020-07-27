@@ -22,7 +22,7 @@ Setting up MySQL for development on your Mac can be tricky and stressful at time
 ## Prerequisites
 
 1. A mac book
-2. Homebrew installed on your mac (Installation guide can [be found here](https://brew.sh/)) 
+2. Homebrew installed on your mac (Installation guide can [be found here](https://brew.sh/))
 
 ### Installing MySQL
 
@@ -44,7 +44,7 @@ Once the installation is done, you can start MySQL as a background service with 
 brew services start mysql
 ```
 
-or 
+or
 
 ```sh
 mysql.server start
@@ -62,7 +62,7 @@ mysql -u root
 ```
 
 This will take you to the `mysql` shell and you should see the `mysql>` prompt.
-Now that we're in the `mysql` shell, we'll be writing MySQL statements to perform several actions for us.
+The prompt should look similar to this 👇🏽:
 
 ```sh
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -79,6 +79,8 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 mysql>
 ```
+
+Now that we're in the `mysql` shell, we'll be writing MySQL statements to perform several actions for us.
 
 We'll approach the setup in three phases:
 
