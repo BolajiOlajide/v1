@@ -99,12 +99,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-mailchimp',
-      options: {
-        endpoint: process.env.GATSBY_MC_ENDPOINT
-      }
-    },
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
