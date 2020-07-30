@@ -142,4 +142,9 @@ Understanding why they are, will lead to less confusion about the way the langua
    ```javascript
    Number(false) // 0
    Number(true) // 1
+
+   true + true + true // 1 + 1 + 1 = 3
+   true - true // 1 - 1 = 0
    ```
+
+   The `==` operators compares two values regardless of their type - since the numerical representation of `true` is `1` that's why `true == 1` returns **true**. However, the `===` compares the types of the two values and that's why `true === 1` returns **false**.
