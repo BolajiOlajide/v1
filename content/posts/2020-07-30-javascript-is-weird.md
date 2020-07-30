@@ -128,3 +128,11 @@ Understanding why they are, will lead to less confusion about the way the langua
    ```
 
    Check out this [StackOverflow answer](https://stackoverflow.com/questions/11939044/why-does-return-0-in-javascript#answer-11939072).
+8. Booleans are evil numbers?
+
+   ```javascript
+   true + true + true // 3
+   true - true // 1
+   true == 1 // true
+   true === 1 // false
+   ```
