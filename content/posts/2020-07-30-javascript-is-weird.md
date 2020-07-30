@@ -68,3 +68,14 @@ Understanding why they are, will lead to less confusion about the way the langua
    ```
 
    `Math.max` is a function that returns the largest of the zero or more numbers given as input parameters, when we call `Math.max()` we pass in no arguments.
+
+   ```javascript
+
+   Math.max(1,4,2) // 4
+
+   Math.min(2,1,3) // 1
+
+   Math.min(1) // 1
+
+   ```
+When we pass in just `1` into the `Math.min` function, the function returns `1` because that's the sole value passed into the function. Internally, the function needs something to compare values passed into it against, like a starting value, let's call this an `Identity` variable.
