@@ -108,7 +108,7 @@ Understanding why they are, will lead to less confusion about the way the langua
 
    However, when we try to coerce an object the result is `'[object Object]'` and that's why `[] + {}` is equal to `'[object Object]'`.
 
-   ```
+   ```javascript
    var arr1 = []
    var arr2 = ['proton']
    var obj = {}
