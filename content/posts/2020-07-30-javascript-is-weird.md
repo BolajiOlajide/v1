@@ -2,7 +2,7 @@
 template: post
 title: Javascript is weird?
 slug: javascript-gotchas
-draft: true
+draft: false
 date: 2020-07-30T12:40:42.321Z
 description: In this article, I try to explain some Javascript weirdness that
   confused me when I started writing javascript.
