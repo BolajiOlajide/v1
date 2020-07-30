@@ -14,6 +14,8 @@ tags:
 ---
 I recently stumbled on a [tweet](https://twitter.com/Ashot_/status/1287818215465324546?s=20) about some of the things considered weird in Javascript. I decided to write this post to share some of the reasons why this things are in javascript.
 
+https://twitter.com/Ashot_/status/1287818215465324546?s=20
+
 Understanding why they are, will lead to less confusion about the way the language handles operations across several data types. Some of these weirdness happen because Javascript is a loosely typed language, which isn't bad in itself but it just means you should be careful the way you use operators and not to always assume.
 
 1. **Why is the `typeof NaN === 'number'`?**
