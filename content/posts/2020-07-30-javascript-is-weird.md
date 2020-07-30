@@ -57,25 +57,32 @@ Understanding why they are, will lead to less confusion about the way the langua
    ```
 4. **Math.max() === -Infiinity and Math.min() === Infinity**
 
-   Weird right?
+      Weird right?
 
-   The question I asked myself when I saw this is, **what exactly does Math.max() do?**
+      The question I asked myself when I saw this is, **what exactly does Math.max() do?**
 
-   I initially confused it with `Number.MAX_VALUE` which represents the maximum numeric value representable in JavaScript. Values greater than `Number.MAX_VALUE` are represented as Infinity.
+      I initially confused it with `Number.MAX_VALUE` which represents the maximum numeric value representable in JavaScript. Values greater than `Number.MAX_VALUE` are represented as Infinity.
 
    ```javascript
    Infinity > Number.MAX_VALUE // true
    ```
 
-   `Math.max` is a function that returns the largest of the zero or more numbers given as input parameters, when we call `Math.max()` we pass in no arguments.
+      `Math.max` is a function that returns the largest of the zero or more numbers given as input parameters, when we call `Math.max()` we pass in no arguments.
 
    ```javascript
-
    Math.max(1,4,2) // 4
 
    Math.min(2,1,3) // 1
 
    Math.min(1) // 1
-
    ```
-When we pass in just `1` into the `Math.min` function, the function returns `1` because that's the sole value passed into the function. Internally, the function needs something to compare values passed into it against, like a starting value, let's call this an `Identity` variable.
+
+   When we pass in just `1` into the `Math.min` function, the function returns `1` because that's the sole value passed into the function. Internally, the function needs something to compare values passed into it against, like a starting value, let's call this an `Identity` variable.
+
+   These articles might help make things clearer:
+
+   * [Math.min returns Infinity?](https://dev.to/dance2die/math-min-returns-infinity-1bi6)
+   * [Why is Math.max() less than Math.min()?](https://charlieharvey.org.uk/page/why_math_max_is_less_than_math_min)
+5. **\[] + \[] === ""**
+
+   Adding two arrays returns an empty string, this happens beca
