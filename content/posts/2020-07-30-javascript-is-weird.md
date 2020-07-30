@@ -154,6 +154,48 @@ Understanding why they are, will lead to less confusion about the way the langua
 
    > The == version of equality is quite liberal. Values may be considered equal even if they are different types, since the operator will force coercion of one or both operators into a single type (usually a number) before performing a comparison. - [Source](https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/)
 
-   According to ECMA, here's the way the \`==\` operator works when\`x == y\`
+   According to ECMA, here's the way the `==` operator works when `x == y`
 
    ![ECMA's definition of how == works](/media/screenshot-2020-07-30-at-16.55.34.png "How the liberal equality operator works.")
+
+   According to the image above, when comparing `[] == 0`, we'd need to convert the array `[]` into it's primitive type, I don't want to dwell too much on primitives because it's a big topic on it's own but if you go through this post here you will be able to figure that the primitive type of an array is the value of `.toString`, which in our case is an empty string.
+
+   At this point, we've been able to reduce the comparison to `"" == 0`, according to the spec above, when you compare a string and a number with the `==` operator, the result will be the result of coercing the string into a number and comparing the two numbers.
+
+   ```javascript
+   [] == 0
+   // when you convert the empty array to it's primitive type using [].toString()
+   // the result is an empty string
+   Number("") // 0
+   0 == 0 // true
+   ```
+10. **9 + "1" = "91' but 91 - "1" = 90**
+
+    This is absolutely normally (for a loosely-typed language, obviously) because the addition operator can be used on strings while the subtraction operator can't.
+
+    When you add a string to a number, Javascript coerces the number into a string, then concatenates the both of them. 
+
+    ```javascript
+    9 + "1"
+    // Javascript coerces the number into a string
+    "9" + "1"
+
+    // then after normal string concatenation we get
+    "91"
+    ```
+
+    However, because subtraction isn't a valid operator for strings, Javascript coerces the string into it's number equivalent.
+
+    ```javascript
+    // since subtraction isn't a valid operator for strings
+    91 - "1"
+    // Javascript coerces the string into a number
+    91 - 1
+    // the result of the subtraction between the two numbers return a number
+    90
+    ```
+
+If this was helpful, feel free to share and/or drop a comment.
+
+If you’ve got questions, feel free to share them in the comment section or reach out to me on [twitter](https://twitter.com/Bolaji___).
+
