@@ -128,7 +128,7 @@ Understanding why they are, will lead to less confusion about the way the langua
    ```
 
    Check out this [StackOverflow answer](https://stackoverflow.com/questions/11939044/why-does-return-0-in-javascript#answer-11939072).
-8. Booleans are evil numbers?
+8. **Booleans are evil numbers?**
 
    ```javascript
    true + true + true // 3
@@ -148,3 +148,12 @@ Understanding why they are, will lead to less confusion about the way the langua
    ```
 
    The `==` operators compares two values regardless of their type - since the numerical representation of `true` is `1` that's why `true == 1` returns **true**. However, the `===` compares the types of the two values and that's why `true === 1` returns **false**.
+9. **\[] == 0 returns true**
+
+   This is also because of the way the `==` operator works. 
+
+   > The == version of equality is quite liberal. Values may be considered equal even if they are different types, since the operator will force coercion of one or both operators into a single type (usually a number) before performing a comparison. - [Source](https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/)
+
+   According to ECMA, here's the way the \`==\` operator works when\`x == y\`
+
+   ![ECMA's definition of how == works](/media/screenshot-2020-07-30-at-16.55.34.png "How the liberal equality operator works.")
