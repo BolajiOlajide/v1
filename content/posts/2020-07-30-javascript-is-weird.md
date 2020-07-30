@@ -32,18 +32,39 @@ Understanding why they are, will lead to less confusion about the way the langua
    Someone explained it beautifully on StackOverflow [here](https://stackoverflow.com/questions/13429451/why-is-9999999999999999-converted-to-10000000000000000-in-javascript#answer-13429506).
 3. **0.1 + 0.2 !== 0.3**
 
-      I remember having a chat with [Michael](https://twitter.com/mykeels) about this some months back. I was literally pulling my hair and cursing because it didn't make any sense to me.
+      I remember having a chat with [Michael](https://twitter.com/mykeels) about this some months back. I was literally pulling my hair and cursing because it didn't make any sense to me. I decided to research more about it and I found a really helpful explanation [here](https://javascript.info/number).
 
-      Understanding the floating point arithmetic is very crucial to understanding why
+   > A number is stored in memory in its binary form, a sequence of bits – ones and zeroes. But fractions like `0.1`, `0.2` that look simple in the decimal numeric system are actually unending fractions in their binary form.
+   >
+   > In other words, what is `0.1`? It is one divided by ten `1/10`, one-tenth. In decimal numeral system such numbers are easily representable. Compare it to one-third: `1/3`. It becomes an endless fraction `0.33333(3)`.
+   >
+   > So, division by powers `10` is guaranteed to work well in the decimal system, but division by `3` is not. For the same reason, in the binary numeral system, the division by powers of `2` is guaranteed to work, but `1/10` becomes an endless binary fraction.
+   >
+   > There’s just no way to store *exactly 0.1* or *exactly 0.2* using the binary system, just like there is no way to store one-third as a decimal fraction.
+   >
+   > The numeric format IEEE-754 solves this by rounding to the nearest possible number. These rounding rules normally don’t allow us to see that “tiny precision loss”, but it exists.
+
+   Understanding the floating point arithmetic is very crucial to understanding why this is.
 
    ```javascript
-   0.1 + 0.3
+   console.log(0.1.toFixed(20)); // 0.10000000000000000555
 
-   // 0.30000000000000004
+   // And when we sum two numbers, their “precision losses” add up.
+
+   // That’s why 0.1 + 0.2 is not exactly 0.3.
+
+   console.log(0.1 + 0.3) // 0.30000000000000004
    ```
-
-```
 4. **Math.max() === -Infiinity and Math.min() === Infinity**
 
-   Another mind
-```
+   Weird right?
+
+   The question I asked myself when I saw this is, **what exactly does Math.max() do?**
+
+   I initially confused it with `Number.MAX_VALUE` which represents the maximum numeric value representable in JavaScript. Values greater than `Number.MAX_VALUE` are represented as Infinity.
+
+   ```javascript
+   Infinity > Number.MAX_VALUE // true
+   ```
+
+   `Math.max` is a function that returns the largest of the zero or more numbers given as input parameters, when we call `Math.max()` we pass in no arguments.
