@@ -83,6 +83,36 @@ Understanding why they are, will lead to less confusion about the way the langua
 
    * [Math.min returns Infinity?](https://dev.to/dance2die/math-min-returns-infinity-1bi6)
    * [Why is Math.max() less than Math.min()?](https://charlieharvey.org.uk/page/why_math_max_is_less_than_math_min)
-5. **\[] + \[] === ""**
+5. **\[] + \[] == ""**
 
-   Adding two arrays returns an empty string, this happens beca
+      Adding two arrays returns an empty string, this happens because the \`+\` o[perator only exists for strings and numbers ](https://tc39.es/ecma262/#sec-addition-operator-plus)in javascript. When you try to add two arrays, Javascript tries to convert the array into a string by extracting the content of the array and converting it to a string, if the array is empty then it defaults to an empty string, hence why \`\[] + \[] == ""\`.
+
+   ```javascript
+   [] + [] // ""
+   ['bol'] + ['aji'] // 'bolaji'
+   ['bo', 'la'] + ['ji'] // bo,laji
+   ```
+
+   Javascript is basically calling the `toString` method on the array prototype and concatenating the result.
+6. **\[] + {} === '\[object Object]'**
+
+   From our understanding of the way the addition operator works so far we know the operator works mainly with strings and numbers. We can convert an array to a string using the `toString` method that exists on the Array prototype.
+
+   ```javascript
+   var arr = ['bol', 'aji']
+   console.log(arr.toString()) // 'bol,aji'
+
+   // we can also coerce it into a string using the `String` method in javscript
+   console.log(String(arr)) // 'bol,aji'
+   ```
+
+   However, when we try to coerce an object the result is `'[object Object]'` and that's why `[] + {}` is equal to `'[object Object]'`.
+
+   ```
+   var arr1 = []
+   var arr2 = ['proton']
+   var obj = {}
+
+   console.log(arr1 + obj) // '[object Object]'
+   console.log(arr2 + obj) // 'proton[object Object]'
+   ```
