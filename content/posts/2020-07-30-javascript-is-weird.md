@@ -116,3 +116,13 @@ Understanding why they are, will lead to less confusion about the way the langua
    console.log(arr1 + obj) // '[object Object]'
    console.log(arr2 + obj) // 'proton[object Object]'
    ```
+7. **{} + \[] === 0**
+
+   Since coercing objects and arrays to their string equivalent is what happens when we use the addition operator on them, it's weird that adding an array to an object returns a value of 0 which is a number. This is because the curly brace \`{\` is a very important character in Javascript used to denote the beginning of a statement block.
+
+   When a statement begins with `{` in Javascript, it's usually interpreted as a block. Since the statement begins with an empty block, the interpreter assumes nothing is happening and goes on to evaluate `+ []`, because the statement now starts with the `addition` operator, it coerces the array into a number type.
+
+   ```javascript
+   Number([]) // 0
+   Number(['proton']) // NaN
+   ```
