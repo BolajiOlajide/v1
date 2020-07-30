@@ -27,4 +27,23 @@ Understanding why they are, will lead to less confusion about the way the langua
    > The type of `NaN`, which stands for Not a Number is, surprisingly, a number. The reason for this is, in computing, `NaN` is actually technically a numeric data type. However, it is a numeric data type whose value cannot be represented using actual numbers. So, the name "Not a Number", doesn't mean that the value is not numeric. It instead means that the value cannot be expressed with numbers.
 2. **Why is 9999999999999999 converted to 10000000000000000 in JavaScript?**
 
-   Javascript
+   Javascript doesn't have integers. **9999999999999999** is treated internally as a floating point number and at this point has ran out of floating-point precision.
+
+   Someone explained it beautifully on StackOverflow [here](https://stackoverflow.com/questions/13429451/why-is-9999999999999999-converted-to-10000000000000000-in-javascript#answer-13429506).
+3. **0.1 + 0.2 !== 0.3**
+
+      I remember having a chat with [Michael](https://twitter.com/mykeels) about this some months back. I was literally pulling my hair and cursing because it didn't make any sense to me.
+
+      Understanding the floating point arithmetic is very crucial to understanding why
+
+   ```javascript
+   0.1 + 0.3
+
+   // 0.30000000000000004
+   ```
+
+```
+4. **Math.max() === -Infiinity and Math.min() === Infinity**
+
+   Another mind
+```
