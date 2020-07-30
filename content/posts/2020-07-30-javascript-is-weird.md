@@ -126,3 +126,5 @@ Understanding why they are, will lead to less confusion about the way the langua
    Number([]) // 0
    Number(['proton']) // NaN
    ```
+
+   Check out this [StackOverflow answer](https://stackoverflow.com/questions/11939044/why-does-return-0-in-javascript#answer-11939072).
