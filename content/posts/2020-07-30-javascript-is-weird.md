@@ -12,13 +12,13 @@ tags:
   - gotchas
   - programming
 ---
-I recently stumbled on a [tweet](https://twitter.com/Ashot_/status/1287818215465324546?s=20) about some of the things considered weird in Javascript. I decided to write this post to share some of the reasons why this things are in javascript. 
+I recently stumbled on a [tweet](https://twitter.com/Ashot_/status/1287818215465324546?s=20) about some of the things considered weird in Javascript. I decided to write this post to share some of the reasons why this things are in javascript.
 
 Understanding why they are, will lead to less confusion about the way the language handles operations across several data types. Some of these weirdness happen because Javascript is a loosely typed language, which isn't bad in itself but it just means you should be careful the way you use operators and not to always assume.
 
 1. **Why is the `typeof NaN === 'number'`?**
 
-   `NaN` stands for `Not a Number` but suprisingly is a number. 
+   `NaN` stands for `Not a Number` but suprisingly has a type, `number`.
 
    This is one thing I considered weird when I started writing Javascript.
 
@@ -55,6 +55,7 @@ Understanding why they are, will lead to less confusion about the way the langua
 
    console.log(0.1 + 0.3) // 0.30000000000000004
    ```
+
 4. **Math.max() === -Infiinity and Math.min() === Infinity**
 
       Weird right?
@@ -83,9 +84,9 @@ Understanding why they are, will lead to less confusion about the way the langua
 
    * [Math.min returns Infinity?](https://dev.to/dance2die/math-min-returns-infinity-1bi6)
    * [Why is Math.max() less than Math.min()?](https://charlieharvey.org.uk/page/why_math_max_is_less_than_math_min)
-5. **\[] + \[] == ""**
+5. **[] + [] == ""**
 
-      Adding two arrays returns an empty string, this happens because the \`+\` o[perator only exists for strings and numbers ](https://tc39.es/ecma262/#sec-addition-operator-plus)in javascript. When you try to add two arrays, Javascript tries to convert the array into a string by extracting the content of the array and converting it to a string, if the array is empty then it defaults to an empty string, hence why \`\[] + \[] == ""\`.
+      Adding two arrays returns an empty string, this happens because the `+` [operator only exists for strings and numbers](https://tc39.es/ecma262/#sec-addition-operator-plus)in javascript. When you try to add two arrays, Javascript tries to convert the array into a string by extracting the content of the array and converting it to a string, if the array is empty then it defaults to an empty string, hence why `[] + [] == ""`.
 
    ```javascript
    [] + [] // ""
@@ -150,7 +151,7 @@ Understanding why they are, will lead to less confusion about the way the langua
    The `==` operators compares two values regardless of their type - since the numerical representation of `true` is `1` that's why `true == 1` returns **true**. However, the `===` compares the types of the two values and that's why `true === 1` returns **false**.
 9. **\[] == 0 returns true**
 
-   This is also because of the way the `==` operator works. 
+   This is also because of the way the `==` operator works.
 
    > The == version of equality is quite liberal. Values may be considered equal even if they are different types, since the operator will force coercion of one or both operators into a single type (usually a number) before performing a comparison. - [Source](https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/)
 
@@ -173,7 +174,7 @@ Understanding why they are, will lead to less confusion about the way the langua
 
     This is absolutely normally (for a loosely-typed language, obviously) because the addition operator can be used on strings while the subtraction operator can't.
 
-    When you add a string to a number, Javascript coerces the number into a string, then concatenates the both of them. 
+    When you add a string to a number, Javascript coerces the number into a string, then concatenates the both of them.
 
     ```javascript
     9 + "1"
@@ -198,4 +199,3 @@ Understanding why they are, will lead to less confusion about the way the langua
 If this was helpful, feel free to share and/or drop a comment.
 
 If you’ve got questions, feel free to share them in the comment section or reach out to me on [twitter](https://twitter.com/Bolaji___).
-
