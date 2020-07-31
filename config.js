@@ -22,7 +22,7 @@ module.exports = {
   ],
   author: {
     name: 'Bolaji Olajide',
-    photo: '/photo.jpeg',
+    photo: '/avatar.png',
     bio: 'Proton is a full-stack software engineer based in Lagos, Nigeria. He currently builds exciting learning experiences with Pluralsight.',
     contacts: {
       email: '',
