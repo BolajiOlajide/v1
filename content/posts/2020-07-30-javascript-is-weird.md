@@ -135,7 +135,7 @@ Understanding why they are, will lead to less confusion about the way the langua
 
    ```javascript
    true + true + true // 3
-   true - true // 1
+   true - true // 0
    true == 1 // true
    true === 1 // false
    ```
