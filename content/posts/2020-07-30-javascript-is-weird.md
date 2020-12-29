@@ -57,7 +57,6 @@ Understanding why they are, will lead to less confusion about the way the langua
 
    console.log(0.1 + 0.3) // 0.30000000000000004
    ```
-
 4. **Math.max() === -Infiinity and Math.min() === Infinity**
 
       Weird right?
@@ -86,7 +85,7 @@ Understanding why they are, will lead to less confusion about the way the langua
 
    * [Math.min returns Infinity?](https://dev.to/dance2die/math-min-returns-infinity-1bi6)
    * [Why is Math.max() less than Math.min()?](https://charlieharvey.org.uk/page/why_math_max_is_less_than_math_min)
-5. **[] + [] == ""**
+5. **\[] + \[] == ""**
 
       Adding two arrays returns an empty string, this happens because the `+` [operator only exists for strings and numbers](https://tc39.es/ecma262/#sec-addition-operator-plus)in javascript. When you try to add two arrays, Javascript tries to convert the array into a string by extracting the content of the array and converting it to a string, if the array is empty then it defaults to an empty string, hence why `[] + [] == ""`.
 
@@ -201,3 +200,5 @@ Understanding why they are, will lead to less confusion about the way the langua
 If this was helpful, feel free to share and/or drop a comment.
 
 If you’ve got questions, feel free to share them in the comment section or reach out to me on [twitter](https://twitter.com/Bolaji___).
+
+You may also want to check out this post by [Toptal about the most common mistakes that many JavaScript developers make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes).
